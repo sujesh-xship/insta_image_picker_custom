@@ -37,6 +37,7 @@ class InstaAssetPickerBuilder extends DefaultAssetPickerBuilderDelegate {
     super.keepScrollOffset,
     super.loadingIndicatorBuilder,
     this.title,
+    this.icon,
     this.closeOnComplete = false,
     InstaAssetCropDelegate cropDelegate = const InstaAssetCropDelegate(),
   })  : _cropController =
@@ -47,7 +48,7 @@ class InstaAssetPickerBuilder extends DefaultAssetPickerBuilderDelegate {
         );
 
   final String? title;
-
+  final Widget? icon;
   final Function(Stream<InstaAssetsExportDetails>) onCompleted;
 
   /// Should the picker be closed when the selection is confirmed
@@ -481,6 +482,9 @@ class InstaAssetPickerBuilder extends DefaultAssetPickerBuilderDelegate {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   pathEntitySelector(context),
+                                  icon!=null?Container(
+                                    child: icon,
+                                  ):Container(),
                                   CircleIconButton(
                                     onTap: unSelectAll,
                                     theme: pickerTheme,

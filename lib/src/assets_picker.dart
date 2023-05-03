@@ -249,6 +249,7 @@ class InstaAssetPicker {
     ThemeData? pickerTheme,
     AssetPickerTextDelegate? textDelegate,
     String? title,
+        Widget? icon,
     bool closeOnComplete = false,
     required Function(Stream<InstaAssetsExportDetails> exportDetails)
         onCompleted,
