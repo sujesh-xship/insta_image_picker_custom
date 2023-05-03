@@ -294,6 +294,7 @@ class InstaAssetPicker {
       initialPermission: ps,
       provider: provider,
       title: title,
+      icon: icon,
       gridCount: gridCount,
       pickerTheme: pickerTheme ?? themeData(Theme.of(context).primaryColor),
       locale: locale,
